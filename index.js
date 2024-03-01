@@ -22,7 +22,6 @@ async function userElement(userData) {
     `;
   userContainer.innerHTML = createUser;
   $container.replaceChild(userContainer, $container.lastChild);
-  await console.log($container.lastChild);
 
   const $ulElement = document.querySelector(".user__repos-box");
   const repositorios = await fetch(repos_url);
