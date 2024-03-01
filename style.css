@@ -207,4 +207,7 @@ svg {
   .user__repos-box {
     width: 50%;
   }
+  .form-container {
+    width: 50%;
+  }
 }
