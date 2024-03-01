@@ -1,0 +1,190 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 80px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  color:aliceblue;
+  background: #101010;
+  margin: 20px;
+}
+
+.form-container{
+  width: 80%;
+  height: 20vh;
+  margin: 30px 0 0 0;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+}
+
+.form__box{
+  width: 100%;
+  position: relative;
+}
+
+.form__input{
+  width: 100%;
+  padding: 15px 20px;
+  outline: none;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, .1);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, .25);
+  border: 1px solid #000;
+  color: #fff;
+  font-size: 1em;
+  letter-spacing: 0.1em;
+}
+
+.form__title{
+  position: absolute;
+  left: 0;
+  font-size: 1em;
+  padding: 15px 20px;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: .1em;
+  border-radius: 4px;
+  transition: .25s;
+  pointer-events: none;
+}
+
+.form-container .form__box input:focus ~ span,
+.form-container .form__box input:valid ~ span
+{
+  transform: translate(15px,-10px);
+  font-size: .75em;
+  padding: 2px 5px;
+  background: #fff;
+  color: #000;
+}
+
+.form__btn {
+  --green: #1BFD9C;
+  font-size: 15px;
+  text-transform: uppercase;
+  padding: 0.7em 2.7em;
+  letter-spacing: 0.06em;
+  position: relative;
+  font-family: inherit;
+  border-radius: 0.6em;
+  overflow: hidden;
+  transition: all 0.3s;
+  line-height: 1.4em;
+  border: 2px solid var(--green);
+  background: linear-gradient(to right, rgba(27, 253, 156, 0.1) 1%, transparent 40%,transparent 60% , rgba(27, 253, 156, 0.1) 100%);
+  color: var(--green);
+  box-shadow: inset 0 0 10px rgba(27, 253, 156, 0.4), 0 0 9px 3px rgba(27, 253, 156, 0.1);
+}
+
+.form__btn:hover {
+  color: #82ffc9;
+  box-shadow: inset 0 0 10px rgba(27, 253, 156, 0.6), 0 0 9px 3px rgba(27, 253, 156, 0.2);
+}
+
+.form__btn:before {
+  content: "";
+  position: absolute;
+  left: -4em;
+  width: 4em;
+  height: 100%;
+  top: 0;
+  transition: transform .4s ease-in-out;
+  background: linear-gradient(to right, transparent 1%, rgba(27, 253, 156, 0.1) 40%,rgba(27, 253, 156, 0.1) 60% , transparent 100%);
+}
+
+.form__btn:hover:before {
+  transform: translateX(15em);
+}
+
+/* ------------------------------ github user ----------------------------------*/
+
+#container{
+  width: 100%;
+}
+
+
+.user-container{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.user__avatar{
+  width: 250px;
+  border-radius: 50%;
+  border: 2px solid #fff;
+}
+
+.user__name{
+  font-size: 2.5em;
+}
+
+.user__descrip{
+  text-align: center;
+  padding: 20px;
+}
+
+.user__repos-box{
+  width: 100%;
+  list-style: none;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.user__title{
+  text-align: center;
+  border-bottom: 2px solid #fff;
+  padding: 0 0 10px 0;
+}
+
+.user__repos{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+}
+
+.user__repo{
+  text-decoration: none;
+  color: #fff;
+  font-size: 1.2em;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: .1em;
+}
+
+.user__star{
+  text-align: center;
+  display: flex;
+  align-items: center;
+}
+
+.user__star p{
+  font-size: 1.2em;
+  color: #666;
+}
+
+svg {
+  position: relative;
+  top: 0;
+  left: 0;
+  height: 30px;
+  width: 30px;
+  transition: all 0.3s;
+  fill: #e3b341;
+}
